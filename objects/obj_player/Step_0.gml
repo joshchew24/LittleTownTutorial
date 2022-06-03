@@ -48,12 +48,21 @@ if (vx != 0 || vy != 0) {
 		sprite_index = spr_player_walk_down;
 		dir = 3;
 	}
+	// Move audio listener with me
+	audio_listener_set_position(0, x, y, 0);
 }
 
 nearbyNPC = collision_rectangle(x-lookrange, y-lookrange, x+lookrange, y+lookrange, obj_par_npc, false, true);
 if nearbyNPC {
 	show_debug_message("obj_player has found an NPC");
+	if !hasGreeted {
+		// Play greeting sound
+		hasGreeted = true
+		audio_play_sound(snd_greeting01, 1, 0)
+	}
 } else {
+	// Reset greeting
+	hasGreeted = false
 	show_debug_message("obj_player has found nothing");
 	
 }

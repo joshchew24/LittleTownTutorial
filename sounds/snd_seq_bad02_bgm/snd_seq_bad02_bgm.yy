@@ -2,7 +2,7 @@
   "name": "snd_seq_bad02_BGM",
   "conversionMode": 0,
   "compression": 0,
-  "type": 0,
+  "type": 1,
   "sampleRate": 44100,
   "bitDepth": 1,
   "bitRate": 128,
