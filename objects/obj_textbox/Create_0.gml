@@ -12,3 +12,6 @@ global.playerControl = false;
 
 // Play UI sound
 audio_play_sound(snd_pop01,1,false)
+
+// Dismiss any visible prompts
+scr_dismissPrompt(obj_prompt, 0);

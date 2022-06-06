@@ -66,9 +66,14 @@ if nearbyNPC {
 		hasGreeted = true
 		audio_play_sound(snd_greeting01, 1, 0)
 	}
+	if (npcPrompt == noone || npcPrompt == undefined) {
+		npcPrompt = scr_showPrompt(nearbyNPC, nearbyNPC.x, nearbyNPC.y - 450);	
+	}
 } else {
 	// Reset greeting
-	hasGreeted = false
+	hasGreeted = false;	
+	// Get rid of prompt
+	scr_dismissPrompt(npcPrompt, 0);
 	show_debug_message("obj_player has found nothing");
 	
 }
