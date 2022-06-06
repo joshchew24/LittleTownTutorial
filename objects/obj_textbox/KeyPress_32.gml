@@ -1,4 +1,6 @@
 /// @description Control textbox
 
-// Self-destruct
-alarm[0] = 2;
+// Begin fade out
+if (fadeMe == 1) {
+	fadeMe = 2;
+}
