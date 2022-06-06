@@ -4,3 +4,5 @@
 textToShow = "hello world";
 textWidth = 450;
 lineHeight = 28;
+
+global.playerControl = false;
